@@ -35,7 +35,13 @@ PUT /jz-fe-http-log
       "method":{"type":"keyword"},
       "param":{"type":"text"},
       "response":{"type":"text"},
-      "message":{"type":"text"},
+      "message":{
+        "type":"text",
+        "fields" : {
+          "keyword" : {
+            "type" : "keyword"
+          }
+      }},
       "stack":{"type":"text"},
       "clientDate":{"type":"date","format":"yyyy-MM-dd HH:mm:ss"},
       "serverDate":{"type":"date","format":"yyyy-MM-dd HH:mm:ss"},
@@ -155,6 +161,7 @@ GET jz-fe-http-log/_search
   "aggs": {
     "group_by_projectName": {
       "terms": {
+        "size": 50,
         "field": "projectName"
       }
     }
@@ -230,10 +237,66 @@ GET jz-fe-http-log/_search
   "aggs": {
     "grouy_by_message": {
       "terms": {
+        "size": 25,
         "field": "message.keyword"
       }
     }
   }
+}
+
+# 按指定项目中的message分页查询
+POST /jz-fe-http-log/_search
+{
+  "size":2,
+  "from": 0,
+   "query": {
+        "bool": {
+            "must": [
+                { "match": { "projectName": "daily-clean" }},
+                { "match": { "message.keyword":  "无可用商家" }}
+            ]
+        }
+    }
+}
+
+# 按时间降序
+POST /jz-fe-http-log/_search
+{
+  "size":1,
+   "query": {
+        "bool": {
+            "must": [
+                { "match": { "projectName": "daily-clean" }},
+                { "match": { "message.keyword":  "无可用商家" }}
+            ]
+        }
+    },
+    "sort": [
+        {"serverDate": "desc"} ,
+        {"_id": "asc"}    
+    ]
+}
+
+# 按时间降序-searchAfter
+POST /jz-fe-http-log/_search
+{
+  "size":1,
+   "query": {
+        "bool": {
+            "must": [
+                { "match": { "projectName": "daily-clean" }},
+                { "match": { "message.keyword":  "无可用商家" }}
+            ]
+        }
+    },
+    "search_after":[
+          1569489763000,
+          "NP4pa20BFerq1YvUydLx"
+        ],
+    "sort": [
+        {"serverDate": "desc"} ,
+        {"_id": "asc"}    
+    ]
 }
 
 # 指定时间段，按项目分组
@@ -257,6 +320,8 @@ GET jz-fe-http-log/_search
     }
   }
 }
+
+
 
 
 ```
