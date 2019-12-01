@@ -68,3 +68,6 @@ vim config/elasticsearch.yml
 # 新增如下内容
 cluster.initial_master_nodes: [“node-1”]
 ```
+
+作者公众号：  
+<img src='http://muchstudy.com/2019/11/10/%E4%B8%80%E6%96%87%E6%90%9E%E5%AE%9AJS%E5%BC%82%E5%B8%B8%E6%8D%95%E8%8E%B7/YIYING.jpg'>
