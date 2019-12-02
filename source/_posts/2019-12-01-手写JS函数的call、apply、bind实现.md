@@ -53,8 +53,9 @@ Function.prototype.ownCall = function(context, ...args) {
   // 这里的this为需要执行的方法
   context[key] = this
   // 方法执行
-  context[key](...args)
+  const result = context[key](...args)
   delete context[key]
+  return result
 }
 ```
 
@@ -112,8 +113,9 @@ Function.prototype.ownApply = function(context, args) {
   // 这里的this为需要执行的方法
   context[key] = this
   // 方法执行
-  context[key](...args)
+  const result = context[key](...args)
   delete context[key]
+  return result
 }
 ```
 
