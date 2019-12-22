@@ -18,6 +18,7 @@ categories: 算法
  * @returns {*}
  */
 function binarySearch(target,arr,start,end) {
+    if( start > end){return -1}
     var start   = start || 0;
     var end     = end || arr.length-1;
 
