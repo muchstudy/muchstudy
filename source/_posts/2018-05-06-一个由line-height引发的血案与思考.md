@@ -104,3 +104,8 @@ display:inline-block">dphyTxg</span>
 1. 当line-height设置的值小于默认的值时就会存在显示不全的问题
 1. normalize.css设置line-height默认为1.15，当字体line-height的normal大于1.15就会存在文字显示不全的问题
 1. 要解决字体在不同平台line-height不一致的问题，需根据具体字体，选择normal在不同平台上的最大值设置
+
+
+<div style="width:70%;margin:auto">
+<img src='http://muchstudy.com/2020/04/04/%E8%81%8A%E8%81%8A%E4%B8%80%E7%BA%BF%E5%BC%80%E5%8F%91%E7%9A%84%E5%9F%BA%E6%9C%AC%E7%B4%A0%E5%85%BB/%E5%85%AC%E4%BC%97%E5%8F%B7%E4%BA%8C%E7%BB%B4%E7%A0%81.gif'>
+</div>

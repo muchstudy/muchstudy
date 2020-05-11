@@ -297,3 +297,8 @@ foo()
 >1. [JS内存管理](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Memory_Management)
 >1. [How JavaScript works: an overview of the engine, the runtime, and the call stack](https://blog.sessionstack.com/how-does-javascript-actually-work-part-1-b0bacc073cf)
 >1. [JavaScript stack size](https://glebbahmutov.com/blog/javascript-stack-size/)
+
+
+<div style="width:70%;margin:auto">
+<img src='http://muchstudy.com/2020/04/04/%E8%81%8A%E8%81%8A%E4%B8%80%E7%BA%BF%E5%BC%80%E5%8F%91%E7%9A%84%E5%9F%BA%E6%9C%AC%E7%B4%A0%E5%85%BB/%E5%85%AC%E4%BC%97%E5%8F%B7%E4%BA%8C%E7%BB%B4%E7%A0%81.gif'>
+</div>
