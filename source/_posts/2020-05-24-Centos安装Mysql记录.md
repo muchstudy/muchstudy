@@ -143,7 +143,7 @@ root 账户键入`visudo`即可进入sudo配置
 
 ### Node连接异常处理
 
-使用mysql包（https://www.npmjs.com/package/mysql）连接服务时报如下错误
+使用mysql包（ https://www.npmjs.com/package/mysql ）连接服务时报如下错误
 ```shell
 Error: ER_NOT_SUPPORTED_AUTH_MODE: Client does not support authentication protocol requested by server; consider upgrading MySQL client
 ```
