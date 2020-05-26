@@ -140,6 +140,32 @@ root 账户键入`visudo`即可进入sudo配置
 找到`root    ALL=(ALL)   ALL`
 在这一行下面增加`work ALL=(ALL)  NOPASSWD:ALL`即可
 
+
+### Node连接异常处理
+
+使用mysql包（https://www.npmjs.com/package/mysql）连接服务时报如下错误
+```shell
+Error: ER_NOT_SUPPORTED_AUTH_MODE: Client does not support authentication protocol requested by server; consider upgrading MySQL client
+```
+
+解决方案如下：
+```shell
+# 选择mysql数据库
+use mysql;
+# 修改admin的密码，关键在于mysql_native_password关键字指定密码类型
+ALTER user 'admin'@'%' IDENTIFIED WITH mysql_native_password by '58admin!!AAA';
+# 更新
+FLUSH PRIVILEGES;
+
+```
+
+执行完，node端就可以连接上mysql8.0了。
+
+可以到mysql数据库中的user表中查看密码，其它的都为`caching_sha2_password`类型，修改完的这个为`mysql_native_password`
+
+> 资料：https://stackoverflow.com/questions/50093144/mysql-8-0-client-does-not-support-authentication-protocol-requested-by-server
+
+
 <div style="width:70%;margin:auto">
 <img src='http://muchstudy.com/2020/04/04/%E8%81%8A%E8%81%8A%E4%B8%80%E7%BA%BF%E5%BC%80%E5%8F%91%E7%9A%84%E5%9F%BA%E6%9C%AC%E7%B4%A0%E5%85%BB/%E5%85%AC%E4%BC%97%E5%8F%B7%E4%BA%8C%E7%BB%B4%E7%A0%81.gif'>
 </div>
