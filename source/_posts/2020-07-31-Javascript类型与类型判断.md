@@ -153,6 +153,8 @@ num === num // flase
 > NaN: [https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/NaN](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/NaN)
 > Why does typeof NaN return 'number'? :[https://stackoverflow.com/questions/2801601/why-does-typeof-nan-return-number](https://stackoverflow.com/questions/2801601/why-does-typeof-nan-return-number)
 
+对于这样一篇文章实际上是个人资料库里的一个整理文档，一直在想这么一篇烂大街的文章分享出来是不是有水文的嫌疑？但是，转过头一想，如果大家把文章中的外链都翻过一遍，那就会觉得：**一个不起眼的小点也有它的价值。**
+
 <div style="width:70%;margin:auto">
 <img src='http://muchstudy.com/2020/04/04/%E8%81%8A%E8%81%8A%E4%B8%80%E7%BA%BF%E5%BC%80%E5%8F%91%E7%9A%84%E5%9F%BA%E6%9C%AC%E7%B4%A0%E5%85%BB/%E5%85%AC%E4%BC%97%E5%8F%B7%E4%BA%8C%E7%BB%B4%E7%A0%81.gif'>
 </div>
