@@ -6,6 +6,9 @@ tags:
 
 JS类型与类型判断是JS中的基础，有必要归纳总结整理一下。
 
+> 对于这样一篇文章实际上是个人资料库里的一个整理文档，一直在想这么一篇烂大街的文章分享出来是不是有水文的嫌疑？但是，转过头一想，如果大家把文章中的外链都翻过一遍，那就会觉得：**一个不起眼的小点也有它的价值。**
+
+
 ## JS类型
 JS共有8种类型，如下表所示
 
@@ -57,6 +60,12 @@ undefined === undefined // true
 typeof null // object
 null === null // true
 ```
+> 为什么`typeof null`为Object呢？答案如下：
+> 在 JavaScript 最初的实现中，JavaScript 中的值是由一个表示类型的标签和实际数据值表示的。对象的类型标签是 0。由于 null 代表的是空指针（大多数平台下值为 0x00），因此，null 的类型标签是 0，typeof null 也因此返回 "object"。（参考来源）    
+> 曾有一个 ECMAScript 的修复提案（通过选择性加入的方式），但被拒绝了。该提案会导致 typeof null === 'null'。
+>
+> Why is typeof null “object”? : [https://stackoverflow.com/questions/18808226/why-is-typeof-null-object](https://stackoverflow.com/questions/18808226/why-is-typeof-null-object)  
+> [https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/typeof#null](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/typeof#null)
 
 - BigInt
 可以用在一个整数字面量后面加 n 的方式定义一个 BigInt ，如：10n，或者调用函数BigInt()。
@@ -153,7 +162,6 @@ num === num // flase
 > NaN: [https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/NaN](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/NaN)
 > Why does typeof NaN return 'number'? :[https://stackoverflow.com/questions/2801601/why-does-typeof-nan-return-number](https://stackoverflow.com/questions/2801601/why-does-typeof-nan-return-number)
 
-对于这样一篇文章实际上是个人资料库里的一个整理文档，一直在想这么一篇烂大街的文章分享出来是不是有水文的嫌疑？但是，转过头一想，如果大家把文章中的外链都翻过一遍，那就会觉得：**一个不起眼的小点也有它的价值。**
 
 <div style="width:70%;margin:auto">
 <img src='http://muchstudy.com/2020/04/04/%E8%81%8A%E8%81%8A%E4%B8%80%E7%BA%BF%E5%BC%80%E5%8F%91%E7%9A%84%E5%9F%BA%E6%9C%AC%E7%B4%A0%E5%85%BB/%E5%85%AC%E4%BC%97%E5%8F%B7%E4%BA%8C%E7%BB%B4%E7%A0%81.gif'>
